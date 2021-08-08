@@ -25,18 +25,17 @@ module.exports = {
     'react/jsx-one-expression-per-line': 'off',
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
-    'import/prefer-default-export': 'off',
     'react/jsx-filename-extension': ['error', { extensions: ['.js', '.jsx'] }],
-    'import/extensions': [
-      'error',
-      'ignorePackages',
-      {
-        js: 'naver',
-        jsx: 'never',
-      },
-    ],
     'prefer-destructuring': ['error', { object: true, array: false }],
     'import/no-extraneous-dependencies': ['error', { devDependencies: true }],
+    'import/extensions': ['error', 'never'],
+    'import/prefer-default-export': 0,
+    'import/no-anonymous-default-export': 0,
+    'import/no-unresolved': 2,
+    'simple-import-sort/imports': 'error',
+    'simple-import-sort/exports': 'error',
+    'sort-imports': 'off',
+    'import/order': 'off',
   },
   overrides: [
     {
@@ -55,21 +54,12 @@ module.exports = {
       rules: {
         'react/react-in-jsx-scope': 'off',
         'no-use-before-define': 'off',
-        'import/no-unresolved': 'off',
         '@typescript-eslint/no-empty-interface': 'warn',
         '@typescript-eslint/explicit-function-return-type': 'off',
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         'react/jsx-filename-extension': [
           'error',
           { extensions: ['.js', '.jsx', '.ts', '.tsx'] },
-        ],
-        'import/extensions': [
-          'error',
-          'ignorePackages',
-          {
-            ts: 'never',
-            tsx: 'never',
-          },
         ],
       },
     },
