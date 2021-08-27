@@ -93,7 +93,7 @@ module.exports = {
     modules: [paths.src, 'node_modules'],
     extensions: ['.ts', '.tsx', '.js', '.jsx', '.json'],
     alias: {
-      '@src': paths.src,
+      '@': paths.src,
     },
   },
 };
