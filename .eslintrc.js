@@ -36,6 +36,7 @@ module.exports = {
     'simple-import-sort/exports': 'error',
     'sort-imports': 'off',
     'import/order': 'off',
+    camelcase: 'off',
   },
   overrides: [
     {
