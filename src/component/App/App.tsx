@@ -9,9 +9,6 @@ const queryClient = new QueryClient();
 export const App = (): ReactElement => {
   return (
     <QueryClientProvider client={queryClient}>
-      <h1 className='text-white text-xl'>
-        Unsplash Image Viewer (React Query Tutorial)
-      </h1>
       <CatImages />
       <ReactQueryDevtools />
     </QueryClientProvider>
