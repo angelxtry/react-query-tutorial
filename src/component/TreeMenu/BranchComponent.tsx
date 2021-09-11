@@ -15,10 +15,10 @@ export const BranchComponent = ({ branch }: BranchComponentProps) => {
       <div
         onClick={() => toggleOpen(!open)}
         role='presentation'
-        className='flex flex-row items-center p-2'
+        className='flex flex-row items-center p-2 pl-4'
       >
-        {hasChildren && (open ? <MdKeyboardArrowDown /> : <MdChevronRight />)}
         {branch.label}
+        {hasChildren && (open ? <MdKeyboardArrowDown /> : <MdChevronRight />)}
       </div>
       {hasChildren &&
         branch.children?.map((child: Branch) => {
