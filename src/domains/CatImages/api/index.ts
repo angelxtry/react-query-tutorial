@@ -1,11 +1,11 @@
-import ky, { HTTPError } from 'ky';
+import ky from 'ky';
 
 import { PagiInfo } from '@/domains/CatImages/types';
 
 const { UNSPLASH_CLIENT_KEY } = process.env;
 
 export const getCatImages = async (): Promise<PagiInfo> => {
-  const url = 'https://api.unsplash.com/search/photos1';
+  const url = 'https://api.unsplash.com/search/photos';
   const json = await ky(url, {
     searchParams: {
       client_id: UNSPLASH_CLIENT_KEY || '',
