@@ -1,3 +1,5 @@
+import { TreeMenu } from '@/component';
+
 export const Sidebar = () => {
   return (
     <nav className='bg-white fixed h-full w-64 flex flex-col border-r border-gray-200'>
@@ -6,6 +8,7 @@ export const Sidebar = () => {
         <br />
         (React Query Tutorial)
       </span>
+      <TreeMenu />
     </nav>
   );
 };
