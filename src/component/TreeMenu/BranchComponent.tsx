@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { MdChevronRight, MdKeyboardArrowDown } from 'react-icons/md';
 
 import { Branch } from '@/component/TreeMenu/types';
 
@@ -8,20 +9,24 @@ interface BranchComponentProps {
 
 export const BranchComponent = ({ branch }: BranchComponentProps) => {
   const [open, toggleOpen] = useState(false);
-  const hasChildren = branch.children && branch.children.length;
+  const hasChildren = branch.children && branch.children.length > 0;
   return (
     <>
       <div
-        key={branch.id}
         onClick={() => toggleOpen(!open)}
         role='presentation'
+        className='flex flex-row items-center p-2'
       >
+        {hasChildren && (open ? <MdKeyboardArrowDown /> : <MdChevronRight />)}
         {branch.label}
       </div>
-      {open &&
-        hasChildren &&
+      {hasChildren &&
         branch.children?.map((child: Branch) => {
-          return <BranchComponent key={child.id} branch={child} />;
+          return (
+            <div key={child.id} className='pl-6'>
+              {open && <BranchComponent key={child.id} branch={child} />}
+            </div>
+          );
         })}
     </>
   );
