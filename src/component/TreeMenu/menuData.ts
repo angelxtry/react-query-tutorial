@@ -8,6 +8,16 @@ export const menuData: Tree = [
       {
         id: '2',
         label: '페르시안',
+        children: [
+          {
+            id: '8',
+            label: '냐용이',
+          },
+          {
+            id: '9',
+            label: '냥이',
+          },
+        ],
       },
       {
         id: '3',
@@ -32,5 +42,9 @@ export const menuData: Tree = [
         label: '리트리버',
       },
     ],
+  },
+  {
+    id: '10',
+    label: '다음은?',
   },
 ];
